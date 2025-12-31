@@ -33,12 +33,12 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button variant="hero" size="xl" asChild>
               <a
-                href="https://calendly.com/simplifai-solutions/discovery-call"
+                href="https://calendly.com/ted-manas/ai-appointment-demo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
               >
-                Book a demo
+                Book a FREE consultation
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>

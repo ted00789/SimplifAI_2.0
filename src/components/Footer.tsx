@@ -39,11 +39,11 @@ export function Footer() {
           {/* CTA */}
           <Button variant="hero" asChild>
             <a
-              href="https://calendly.com/simplifai-solutions/discovery-call"
+              href="https://calendly.com/ted-manas/ai-appointment-demo"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a demo
+              Book a FREE consultation
             </a>
           </Button>
         </div>
