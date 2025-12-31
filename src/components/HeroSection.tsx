@@ -20,13 +20,13 @@ export function HeroSection() {
 
           {/* Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Stop losing leads when{" "}
-            <span className="text-gradient">you miss calls</span>
+            Stop losing jobs to{" "}
+            <span className="text-gradient">missed calls</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            AI receptionists, chatbots, and automations that capture, qualify, and book your leads 24/7 — so you never lose another customer to a missed call or slow follow-up.
+            When someone calls or visits your site, our AI answers right away and helps book the job — even after hours.
           </p>
 
           {/* CTAs */}
@@ -43,12 +43,8 @@ export function HeroSection() {
               </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a
-                href="https://missed-call-auditor.lovable.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Try the Missed Call Calculator
+              <a href="#demos">
+                ▶ Try the AI live
               </a>
             </Button>
           </div>

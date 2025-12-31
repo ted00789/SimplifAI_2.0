@@ -3,27 +3,27 @@ import { PhoneMissed, Clock, Users, Zap, MessageSquareX, Trophy } from "lucide-r
 const problems = [
   {
     icon: PhoneMissed,
-    text: "Missed calls go straight to voicemail — and voicemails go unanswered",
+    text: "Missed calls go to voicemail — and most never get returned.",
   },
   {
     icon: Clock,
-    text: "After-hours inquiries sit until morning while leads go cold",
+    text: "After-hours calls sit overnight while people move on.",
   },
   {
     icon: MessageSquareX,
-    text: "Form leads get followed up too late — if at all",
+    text: "Form leads get followed up too late — or not at all.",
   },
   {
     icon: Users,
-    text: "Your team can't answer phones and do their jobs at the same time",
+    text: "Your team can't answer phones and do the work at the same time.",
   },
   {
     icon: Zap,
-    text: "Competitors who respond faster win the business",
+    text: "The business that replies first usually wins the job.",
   },
   {
     icon: Trophy,
-    text: "Speed-to-lead matters — the first to respond usually wins",
+    text: "Slow response means lost jobs.",
   },
 ];
 
