@@ -34,7 +34,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <img src={logo} alt="SimplifAI Solutions" className="h-8 md:h-10" />
+            <img src={logo} alt="SimplifAI Solutions" className="h-10 md:h-14" />
           </a>
 
           {/* Desktop Navigation */}
