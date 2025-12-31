@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { getCalendlyUrlWithReferral } from "@/lib/referral";
+
+const CALENDLY_URL = "https://calendly.com/ted-manas/ai-appointment-demo";
 
 export function CalculatorSection() {
   const [missedCallsWeek, setMissedCallsWeek] = useState(12);
@@ -217,7 +220,7 @@ export function CalculatorSection() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="hero" size="lg" asChild className="w-full sm:w-auto min-h-[48px]">
                   <a
-                    href="https://calendly.com/ted-manas/ai-appointment-demo"
+                    href={getCalendlyUrlWithReferral(CALENDLY_URL)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group"

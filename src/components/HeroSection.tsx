@@ -1,6 +1,8 @@
 import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getCalendlyUrlWithReferral } from "@/lib/referral";
 
+const CALENDLY_URL = "https://calendly.com/ted-manas/ai-appointment-demo";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -33,7 +35,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button variant="hero" size="xl" asChild>
               <a
-                href="https://calendly.com/ted-manas/ai-appointment-demo"
+                href={getCalendlyUrlWithReferral(CALENDLY_URL)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"

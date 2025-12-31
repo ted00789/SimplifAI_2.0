@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import { getCalendlyUrlWithReferral } from "@/lib/referral";
+
+const CALENDLY_URL = "https://calendly.com/ted-manas/ai-appointment-demo";
 
 const navItems = [
   { label: "How it works", href: "#how-it-works" },
@@ -54,7 +57,7 @@ export function Navigation() {
           <div className="hidden md:block">
             <Button variant="hero" size="lg" asChild>
               <a
-                href="https://calendly.com/ted-manas/ai-appointment-demo"
+                href={getCalendlyUrlWithReferral(CALENDLY_URL)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,7 +92,7 @@ export function Navigation() {
               ))}
               <Button variant="hero" size="lg" className="mt-4" asChild>
                 <a
-                  href="https://calendly.com/ted-manas/ai-appointment-demo"
+                  href={getCalendlyUrlWithReferral(CALENDLY_URL)}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

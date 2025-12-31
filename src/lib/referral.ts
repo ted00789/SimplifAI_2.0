@@ -46,3 +46,17 @@ export function clearReferral(): void {
   localStorage.removeItem(REFERRAL_SOURCE_KEY);
   localStorage.removeItem(REFERRAL_SAVED_AT_KEY);
 }
+
+/**
+ * Builds a Calendly URL with UTM parameters if a referral source exists.
+ */
+export function getCalendlyUrlWithReferral(baseUrl: string): string {
+  const referralSource = getReferralSource();
+  
+  if (!referralSource) {
+    return baseUrl;
+  }
+
+  const separator = baseUrl.includes('?') ? '&' : '?';
+  return `${baseUrl}${separator}utm_source=partner&utm_campaign=${encodeURIComponent(referralSource)}`;
+}
