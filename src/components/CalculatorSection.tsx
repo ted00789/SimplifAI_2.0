@@ -90,7 +90,7 @@ export function CalculatorSection() {
             </p>
           </div>
 
-        {/* Calculator */}
+          {/* Calculator */}
         <div className="w-full md:max-w-2xl md:mx-auto">
           <div className="card-elevated p-5 sm:p-8 md:p-10">
             <div className="space-y-6 md:space-y-8">
@@ -238,6 +238,7 @@ export function CalculatorSection() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
