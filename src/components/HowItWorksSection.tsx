@@ -39,7 +39,7 @@ export function HowItWorksSection() {
             <div key={index} className="relative">
               {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-full w-full h-px bg-gradient-to-r from-primary/50 to-transparent z-0" />
+                <div className="hidden md:block absolute top-8 left-20 right-0 h-px bg-gradient-to-r from-primary/50 to-transparent z-0 -mr-8 lg:-mr-12" />
               )}
               
               <div className="relative z-10 text-center md:text-left">
