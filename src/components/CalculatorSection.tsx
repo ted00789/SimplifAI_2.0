@@ -46,27 +46,49 @@ export function CalculatorSection() {
   };
 
   return (
-    <section id="calculator" className="py-16 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8 bg-secondary/30 relative">
-      {/* Glow effect */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-8 md:mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-4 md:mb-6">
-            <Calculator size={18} className="text-primary" />
-            <span className="text-sm font-semibold text-primary">Free Tool</span>
+    <section id="calculator" className="relative">
+      {/* Pain Amplifier Lead-in */}
+      <div className="py-12 md:py-16 px-4 md:px-6 lg:px-8 bg-muted/50 border-b border-border/50">
+        <div className="max-w-2xl mx-auto text-center space-y-4">
+          <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
+            Most businesses don't realize this…
+          </h3>
+          <div className="space-y-2 text-muted-foreground text-base md:text-lg">
+            <p>When a call goes unanswered, most people don't call back.</p>
+            <p>That's a booked job gone — quietly.</p>
+            <p>Just a few missed calls a week can turn into thousands lost each year.</p>
           </div>
-          
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 px-2">
-            Missed Call Loss Calculator
-          </h2>
-          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-2">
-            See how much money you may be losing from missed calls.
+          <p className="text-foreground font-medium pt-2">
+            This calculator shows what missed calls could be costing your business.
           </p>
-          <p className="text-muted-foreground/70 text-sm">
-            Answer 3 quick questions.
+          <p className="text-primary text-sm pt-2">
+            ↓ Enter a few numbers below to see it for yourself
           </p>
         </div>
+      </div>
+
+      {/* Calculator Section */}
+      <div className="py-16 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8 bg-secondary/30 relative">
+        {/* Glow effect */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-8 md:mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-4 md:mb-6">
+              <Calculator size={18} className="text-primary" />
+              <span className="text-sm font-semibold text-primary">Free Tool</span>
+            </div>
+            
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 px-2">
+              Missed Call Loss Calculator
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-2">
+              See how much money you may be losing from missed calls.
+            </p>
+            <p className="text-muted-foreground/70 text-sm">
+              Answer 3 quick questions.
+            </p>
+          </div>
 
         {/* Calculator */}
         <div className="w-full md:max-w-2xl md:mx-auto">
