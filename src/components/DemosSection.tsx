@@ -58,16 +58,18 @@ export function DemosSection() {
             {/* Voiceflow chat container */}
             <div 
               id="voiceflow-chat-container" 
-              className="aspect-video bg-secondary rounded-xl flex items-center justify-center mb-6 border border-border overflow-hidden"
-              style={{ minHeight: "350px" }}
+              className="relative w-full rounded-xl mb-6 border border-border overflow-hidden bg-secondary"
+              style={{ height: "400px", minHeight: "350px" }}
             >
-              <div className="text-center p-6">
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 animate-pulse">
-                  <MessageCircle size={32} className="text-primary" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 animate-pulse">
+                    <MessageCircle size={32} className="text-primary" />
+                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    Loading chat...
+                  </p>
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  Loading chat...
-                </p>
               </div>
             </div>
             

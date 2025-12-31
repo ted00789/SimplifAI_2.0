@@ -5,19 +5,19 @@ const steps = [
     number: "01",
     icon: MessageSquare,
     title: "Tell us about your business",
-    description: "Share your services, FAQs, booking rules, and how you want calls handled. We learn your business so the AI sounds like your team.",
+    description: "Share your services, common questions, and how you want calls handled. We learn how your business works so the AI sounds like your team.",
   },
   {
     number: "02",
     icon: Settings,
-    title: "We build and customize your AI",
-    description: "We set up your AI receptionist, chatbot, and automations — trained specifically for your business and ready to work.",
+    title: "We set up your AI",
+    description: "We build and customize your AI receptionist, chatbot, and follow-ups so they are ready to work for your business.",
   },
   {
     number: "03",
     icon: Rocket,
-    title: "Start capturing leads on autopilot",
-    description: "Go live and watch your AI capture, qualify, and book leads 24/7. You focus on the work — we handle the first impression.",
+    title: "Start capturing jobs automatically",
+    description: "Your AI goes live and answers calls and messages 24/7. You focus on the work while it handles the first impression.",
   },
 ];
 
