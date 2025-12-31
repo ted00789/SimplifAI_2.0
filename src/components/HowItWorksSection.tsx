@@ -37,10 +37,6 @@ export function HowItWorksSection() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-20 right-0 h-px bg-gradient-to-r from-primary/50 to-transparent z-0 -mr-8 lg:-mr-12" />
-              )}
               
               <div className="relative z-10 text-center md:text-left">
                 {/* Step number */}
