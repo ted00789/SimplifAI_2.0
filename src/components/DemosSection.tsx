@@ -1,6 +1,9 @@
 import { Phone, Building2, Leaf, Thermometer, Heart, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
+import { getCalendlyUrlWithReferral } from "@/lib/referral";
+
+const CALENDLY_URL = "https://calendly.com/ted-manas/ai-appointment-demo";
 
 const demos = [
   {
@@ -160,7 +163,7 @@ export function DemosSection() {
           </p>
           <Button asChild size="lg" className="w-full sm:w-auto">
             <a
-              href="https://calendly.com/ted-manas/ai-appointment-demo"
+              href={getCalendlyUrlWithReferral(CALENDLY_URL)}
               target="_blank"
               rel="noopener noreferrer"
             >

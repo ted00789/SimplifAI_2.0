@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import { getCalendlyUrlWithReferral } from "@/lib/referral";
+
+const CALENDLY_URL = "https://calendly.com/ted-manas/ai-appointment-demo";
 
 const footerLinks = [
   { label: "How it works", href: "#how-it-works" },
@@ -39,7 +42,7 @@ export function Footer() {
           {/* CTA */}
           <Button variant="hero" asChild>
             <a
-              href="https://calendly.com/ted-manas/ai-appointment-demo"
+              href={getCalendlyUrlWithReferral(CALENDLY_URL)}
               target="_blank"
               rel="noopener noreferrer"
             >
