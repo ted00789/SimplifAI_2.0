@@ -53,9 +53,9 @@ export function DemosSection() {
             return (
               <div
                 key={index}
-                className="card-elevated group hover:border-primary/30 transition-all p-5 sm:p-6"
+                className="card-elevated group hover:border-primary/30 transition-all p-5 sm:p-6 flex flex-col h-full"
               >
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-4 mb-4 flex-1">
                   <div className="w-11 h-11 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0">
                     <IconComponent size={22} className="text-primary-foreground" />
                   </div>
@@ -70,7 +70,7 @@ export function DemosSection() {
                 </div>
 
                 {/* Phone Number - Large and Tappable */}
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 mt-auto">
                   <a
                     href={`tel:${demo.phoneRaw}`}
                     className="flex items-center gap-2 text-xl sm:text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
