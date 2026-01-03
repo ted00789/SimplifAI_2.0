@@ -42,9 +42,9 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding relative">
       <div className="section-container">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Common questions
           </h2>
@@ -54,12 +54,12 @@ export function FAQSection() {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-secondary/50 border border-border rounded-xl px-6 data-[state=open]:border-primary/30"
+                className="bg-secondary/30 backdrop-blur-sm border border-border/50 rounded-xl px-6 data-[state=open]:border-primary/30"
               >
                 <AccordionTrigger className="text-left font-display font-semibold text-lg hover:no-underline py-5">
                   {faq.question}

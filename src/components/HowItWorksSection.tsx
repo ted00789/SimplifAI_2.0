@@ -23,9 +23,12 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="section-padding bg-secondary/30">
-      <div className="section-container">
-        <div className="text-center mb-12 md:mb-16">
+    <section id="how-it-works" className="section-padding relative">
+      {/* Subtle section accent - soft fade, not hard edge */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/20 to-transparent pointer-events-none" />
+      
+      <div className="section-container relative z-10">
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             How it works
           </h2>
@@ -34,7 +37,7 @@ export function HowItWorksSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-10 max-w-5xl mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               
