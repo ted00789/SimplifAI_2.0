@@ -38,7 +38,7 @@ export function HowItWorksSection() {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               
-              <div className="relative z-10 text-center md:text-left">
+              <div className="relative z-10 text-center flex flex-col items-center">
                 {/* Step number */}
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 border border-primary/30 mb-6">
                   <span className="font-display text-2xl font-bold text-primary">
