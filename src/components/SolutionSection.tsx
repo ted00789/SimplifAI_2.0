@@ -36,11 +36,8 @@ const solutions = [
 export function SolutionSection() {
   return (
     <section id="solution" className="section-padding relative">
-      {/* Subtle glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
-      
       <div className="section-container relative z-10">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             How you <span className="text-gradient">fix it</span>
           </h2>
@@ -49,7 +46,7 @@ export function SolutionSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
           {solutions.map((solution, index) => (
             <div
               key={index}

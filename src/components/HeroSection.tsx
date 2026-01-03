@@ -5,15 +5,11 @@ import { getCalendlyUrlWithReferral } from "@/lib/referral";
 const CALENDLY_URL = "https://calendly.com/ted-manas/ai-appointment-demo";
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-glow opacity-30" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-      
+    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/60 backdrop-blur-sm border border-border/50 mb-8 animate-fade-in">
             <Phone size={16} className="text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
               AI-powered lead capture for service businesses

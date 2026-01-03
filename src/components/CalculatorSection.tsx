@@ -51,7 +51,7 @@ export function CalculatorSection() {
   return (
     <section id="calculator" className="relative">
       {/* Pain Amplifier Lead-in */}
-      <div className="py-12 md:py-16 px-4 md:px-6 lg:px-8 bg-muted/50 border-b border-border/50">
+      <div className="py-10 md:py-12 px-4 md:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center space-y-4">
           <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
             Most businesses don't realize this…
@@ -71,12 +71,9 @@ export function CalculatorSection() {
       </div>
 
       {/* Calculator Section */}
-      <div className="py-16 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8 bg-secondary/30 relative">
-        {/* Glow effect */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
-        
+      <div className="py-12 md:py-16 px-4 md:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-8 md:mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-4 md:mb-6">
               <Calculator size={18} className="text-primary" />
               <span className="text-sm font-semibold text-primary">Free Tool</span>
@@ -151,7 +148,7 @@ export function CalculatorSection() {
               </div>
 
               {/* Advanced toggle */}
-              <div className="pt-2 border-t border-border">
+              <div className="pt-2 border-t border-border/50">
                 <div className="flex items-center justify-between py-3">
                   <Label htmlFor="advanced-toggle" className="text-sm text-muted-foreground cursor-pointer">
                     Make it more accurate (optional)
@@ -189,7 +186,7 @@ export function CalculatorSection() {
             </div>
 
             {/* Results */}
-            <div className="mt-8 p-5 sm:p-6 bg-background rounded-xl border border-border">
+            <div className="mt-8 p-5 sm:p-6 bg-background/50 backdrop-blur-sm rounded-xl border border-border/50">
               <p className="text-center text-muted-foreground mb-2">Estimated loss per month:</p>
               <p className="text-center text-4xl sm:text-5xl md:text-6xl font-bold text-red-500 mb-4">
                 ${lostRevenueMonth.toLocaleString()}
@@ -215,7 +212,7 @@ export function CalculatorSection() {
             </div>
 
             {/* CTA */}
-            <div className="mt-8 pt-6 border-t border-border text-center space-y-4">
+            <div className="mt-8 pt-6 border-t border-border/50 text-center space-y-4">
               <p className="text-lg font-medium">Want to stop losing these jobs?</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="hero" size="lg" asChild className="w-full sm:w-auto min-h-[48px]">

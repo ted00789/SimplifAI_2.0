@@ -13,11 +13,7 @@ const benefits = [
 
 export function FinalCTASection() {
   return (
-    <section className="section-padding relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-glow opacity-40" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
-      
+    <section className="section-padding-lg relative overflow-hidden">
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">

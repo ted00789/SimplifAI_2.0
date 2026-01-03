@@ -131,11 +131,15 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .section-padding-lg {
+    @apply py-16 md:py-20 lg:py-28;
   }
 
   .card-elevated {
-    @apply bg-card rounded-2xl border border-border p-6 md:p-8;
+    @apply bg-card/60 backdrop-blur-sm rounded-2xl border border-border/50 p-6 md:p-8;
     box-shadow: var(--shadow-card);
   }
 }

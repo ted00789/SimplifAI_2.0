@@ -68,7 +68,7 @@ export function DemosSection() {
     <section id="demos" className="section-padding relative overflow-x-hidden">
       <div className="section-container max-w-full overflow-hidden">
         {/* Header */}
-        <div className="text-center mb-10 md:mb-14 px-4">
+        <div className="text-center mb-8 md:mb-12 px-4">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Call These Numbers to Test <span className="text-gradient">Real AI Receptionists</span>
           </h2>
@@ -78,7 +78,7 @@ export function DemosSection() {
         </div>
 
         {/* Demo Cards Grid */}
-        <div className="grid sm:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto mb-8 w-full">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-5 max-w-4xl mx-auto mb-6 w-full">
           {demos.map((demo, index) => {
             const IconComponent = demo.icon;
             return (
@@ -126,12 +126,12 @@ export function DemosSection() {
         </div>
 
         {/* Trust Note */}
-        <p className="text-center text-sm text-muted-foreground mb-12 md:mb-16">
+        <p className="text-center text-sm text-muted-foreground mb-10 md:mb-12">
           These are demo numbers only. Calls are free. No personal data is saved.
         </p>
 
         {/* Chatbot Section */}
-        <div className="flex justify-center w-full mb-12 md:mb-16">
+        <div className="flex justify-center w-full mb-10 md:mb-12">
           <div className="w-full max-w-[900px] px-4">
             <div className="text-center mb-6">
               <div className="inline-flex items-center gap-2 mb-3">
@@ -147,7 +147,7 @@ export function DemosSection() {
             <div className="card-elevated p-4 sm:p-6 rounded-2xl">
               <div 
                 id="voiceflow-chat-container" 
-                className="w-full h-[520px] sm:h-[600px] md:h-[700px] rounded-xl overflow-hidden bg-secondary/50"
+                className="w-full h-[520px] sm:h-[600px] md:h-[700px] rounded-xl overflow-hidden bg-secondary/30"
               />
             </div>
           </div>
