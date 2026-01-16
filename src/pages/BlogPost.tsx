@@ -49,9 +49,27 @@ export default function BlogPost() {
               </header>
 
               {/* Post Content */}
-              <div className="prose prose-lg prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-table:text-muted-foreground prose-th:text-foreground prose-th:font-semibold prose-td:border-border prose-th:border-border">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
-              </div>
+              {post.isHtml ? (
+                <div 
+                  className="prose prose-lg prose-invert max-w-none 
+                    prose-headings:text-foreground prose-headings:font-bold
+                    prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+                    prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+                    prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
+                    prose-strong:text-foreground 
+                    prose-li:text-muted-foreground 
+                    prose-ul:my-4 prose-ul:pl-6
+                    prose-a:text-primary hover:prose-a:text-primary/80 
+                    prose-table:my-8 prose-table:w-full
+                    prose-th:text-foreground prose-th:font-semibold prose-th:text-left prose-th:p-3 prose-th:bg-muted/50 prose-th:border prose-th:border-border
+                    prose-td:text-muted-foreground prose-td:p-3 prose-td:border prose-td:border-border"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
+              ) : (
+                <div className="prose prose-lg prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-table:text-muted-foreground prose-th:text-foreground prose-th:font-semibold prose-td:border-border prose-th:border-border">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+                </div>
+              )}
             </article>
           ) : (
             <div className="text-center py-16">

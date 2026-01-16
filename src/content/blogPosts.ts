@@ -4,6 +4,7 @@ export interface BlogPost {
   date: string;
   excerpt: string;
   content: string;
+  isHtml?: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -12,148 +13,171 @@ export const blogPosts: BlogPost[] = [
     title: "How an AI Receptionist Actually Helps Your Business (Without the Hype)",
     date: "2024-01-20",
     excerpt: "Learn how an AI receptionist answers calls, books appointments, and captures leads so your business never misses opportunities.",
-    content: `# How an AI Receptionist Actually Helps Your Business (Without the Hype)
+    isHtml: true,
+    content: `
+<h2>Quick Answer</h2>
+<p>An AI receptionist answers your calls when you can't, books jobs automatically, and captures leads you would otherwise lose. It quietly fixes missed calls, slow follow-ups, and front-desk overload.</p>
 
-## Quick Answer
+<h2>What Is an AI Receptionist?</h2>
+<p>An AI receptionist is a system that answers your business phone and talks to customers like a real front-desk person would.</p>
 
-An AI receptionist answers your calls when you can't, books jobs automatically, and captures leads you would otherwise lose. It quietly fixes missed calls, slow follow-ups, and front-desk overload.
+<p>Not a menu.</p>
+<p>Not "press 1 for sales."</p>
+<p>Not voicemail.</p>
 
-## What Is an AI Receptionist?
+<p>It listens. It responds. It asks the next question.</p>
 
-An AI receptionist is a system that answers your business phone and talks to customers like a real front-desk person would.
+<p>If someone calls asking for a quote, it gathers the details.<br>
+If they want to book, it books.<br>
+If the call needs a human, it routes it.</p>
 
-Not a menu.
-Not "press 1 for sales."
-Not voicemail.
+<p>That's it.</p>
+<p>And yes, it works after hours too.</p>
 
-It listens. It responds. It asks the next question.
+<h2>Why Missed Calls Are a Bigger Problem Than Most Owners Think</h2>
+<p>Here's the thing most businesses underestimate.</p>
 
-If someone calls asking for a quote, it gathers the details.
-If they want to book, it books.
-If the call needs a human, it routes it.
+<p>People don't leave voicemails anymore.</p>
 
-That's it.
+<p>They hang up and call the next company on Google.</p>
 
-And yes, it works after hours too.
+<p>I've seen businesses lose 20 to 40 percent of inbound calls simply because no one picked up during busy hours. Not because they were bad. Just busy.</p>
 
-## Why Missed Calls Are a Bigger Problem Than Most Owners Think
+<p>An AI receptionist answers immediately. Every time.</p>
 
-Here's the thing most businesses underestimate.
+<p>No callback delay.<br>
+No "we'll get to it later."<br>
+No lost lead.</p>
 
-People don't leave voicemails anymore.
+<h2>How an AI Receptionist Makes You More Money</h2>
+<p>This part isn't complicated.</p>
 
-They hang up and call the next company on Google.
+<h3>1. It captures leads you never knew you lost</h3>
+<p>If your phone rings while your team is busy, that call is gone. An AI receptionist grabs the name, number, and reason for calling before that happens.</p>
 
-I've seen businesses lose 20 to 40 percent of inbound calls simply because no one picked up during busy hours. Not because they were bad. Just busy.
+<p>Those leads add up fast.</p>
 
-An AI receptionist answers immediately. Every time.
+<h3>2. It books jobs without your team involved</h3>
+<p>The AI can check availability and schedule appointments on the spot. No back-and-forth. No follow-up calls.</p>
 
-No callback delay.
-No "we'll get to it later."
-No lost lead.
+<p>Customer calls.<br>
+Customer books.<br>
+Done.</p>
 
-## How an AI Receptionist Makes You More Money
+<h3>3. It filters out low-quality calls</h3>
+<p>Not every call deserves your time. The AI can ask a few simple questions so your team only talks to people who are actually ready to move forward.</p>
 
-This part isn't complicated.
+<p>That alone saves hours every week.</p>
 
-### 1. It captures leads you never knew you lost
+<h2>How It Saves Your Team's Time (And Sanity)</h2>
+<p>Most reception work is repetitive.</p>
 
-If your phone rings while your team is busy, that call is gone. An AI receptionist grabs the name, number, and reason for calling before that happens.
+<p>Same questions.<br>
+Same answers.<br>
+Same scheduling steps.</p>
 
-Those leads add up fast.
+<p>An AI receptionist handles:</p>
 
-### 2. It books jobs without your team involved
+<ul>
+  <li>Common questions</li>
+  <li>Booking and rescheduling</li>
+  <li>Name and contact collection</li>
+  <li>Call routing</li>
+</ul>
 
-The AI can check availability and schedule appointments on the spot. No back-and-forth. No follow-up calls.
+<p>Your team stops living on the phone and starts focusing on real work. The kind that actually grows the business.</p>
 
-Customer calls.
-Customer books.
-Done.
+<h2>What Types of Businesses See the Biggest Impact?</h2>
+<p>If your phone is part of how you make money, this applies to you.</p>
 
-### 3. It filters out low-quality calls
+<p>Especially:</p>
 
-Not every call deserves your time. The AI can ask a few simple questions so your team only talks to people who are actually ready to move forward.
+<ul>
+  <li>Car detailing and auto services</li>
+  <li>Lawn care and landscaping</li>
+  <li>HVAC and home services</li>
+  <li>Medical and wellness clinics</li>
+  <li>Real estate offices</li>
+</ul>
 
-That alone saves hours every week.
+<p>Basically, if customers call to ask questions or book something, an AI receptionist helps.</p>
 
-## How It Saves Your Team's Time (And Sanity)
+<h2>AI Receptionist vs Human Receptionist</h2>
 
-Most reception work is repetitive.
+<table>
+  <thead>
+    <tr>
+      <th>Thing that matters</th>
+      <th>AI Receptionist</th>
+      <th>Human Receptionist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Availability</td>
+      <td>Always on</td>
+      <td>Limited hours</td>
+    </tr>
+    <tr>
+      <td>Missed calls</td>
+      <td>None</td>
+      <td>Happens daily</td>
+    </tr>
+    <tr>
+      <td>Speed</td>
+      <td>Instant</td>
+      <td>Depends on workload</td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td>Predictable</td>
+      <td>Salary plus benefits</td>
+    </tr>
+    <tr>
+      <td>Call volume</td>
+      <td>Unlimited</td>
+      <td>One at a time</td>
+    </tr>
+  </tbody>
+</table>
 
-Same questions.
-Same answers.
-Same scheduling steps.
+<p>Most smart businesses don't replace humans.<br>
+They use AI to cover gaps humans can't.</p>
 
-An AI receptionist handles:
+<h2>Is It Hard to Set Up?</h2>
+<p>No.</p>
 
-- Common questions
-- Booking and rescheduling
-- Name and contact collection
-- Call routing
+<p>Most setups take a few days.</p>
 
-Your team stops living on the phone and starts focusing on real work. The kind that actually grows the business.
+<p>It connects to your phone number, calendar, and lead system. Once it's live, it just runs.</p>
 
-## What Types of Businesses See the Biggest Impact?
+<p>You don't babysit it.<br>
+You don't manage it daily.<br>
+You just get better call results.</p>
 
-If your phone is part of how you make money, this applies to you.
+<h2>FAQ</h2>
 
-Especially:
+<p><strong>Does an AI receptionist sound robotic?</strong><br>
+No. Modern systems sound natural enough that most callers don't question it.</p>
 
-- Car detailing and auto services
-- Lawn care and landscaping
-- HVAC and home services
-- Medical and wellness clinics
-- Real estate offices
+<p><strong>Will customers get annoyed talking to AI?</strong><br>
+Customers care about getting helped quickly. If their problem is solved, they're fine.</p>
 
-Basically, if customers call to ask questions or book something, an AI receptionist helps.
+<p><strong>Can it handle complicated calls?</strong><br>
+It handles common requests and hands off complex situations to a human when needed.</p>
 
-## AI Receptionist vs Human Receptionist (The Honest Comparison)
+<p><strong>Is it expensive?</strong><br>
+It usually costs far less than a full-time receptionist and recovers lost revenue quickly.</p>
 
-| Thing that matters | AI Receptionist | Human Receptionist |
-|---|---|---|
-| Availability | Always on | Limited hours |
-| Missed calls | None | Happens daily |
-| Speed | Instant | Depends on workload |
-| Cost | Predictable | Salary plus benefits |
-| Call volume | Unlimited | One at a time |
+<p><strong>Does it replace staff?</strong><br>
+No. It supports your staff by handling overflow and repetitive work.</p>
 
-Most smart businesses don't replace humans.
-They use AI to cover gaps humans can't.
-
-## Is It Hard to Set Up?
-
-No.
-
-Most setups take a few days.
-
-It connects to your phone number, calendar, and lead system. Once it's live, it just runs.
-
-You don't babysit it.
-You don't manage it daily.
-You just get better call results.
-
-## FAQ Section
-
-**Q: Does an AI receptionist sound robotic?**
-A: No. Modern systems sound natural enough that most callers don't question it.
-
-**Q: Will customers get annoyed talking to AI?**
-A: Customers care about getting helped quickly. If their problem is solved, they're fine.
-
-**Q: Can it handle complicated calls?**
-A: It handles common requests and hands off complex situations to a human when needed.
-
-**Q: Is it expensive?**
-A: It usually costs far less than a full-time receptionist and recovers lost revenue quickly.
-
-**Q: Does it replace staff?**
-A: No. It supports your staff by handling overflow and repetitive work.
-
-## Sources & Citations
-
-- https://seo.co/ai/ai-content-citation/
-- https://storychief.io/blog/how-to-structure-your-content-so-llms-are-more-likely-to-cite-you
-- https://www.techmagnate.com/blog/llm-citation-guide/
+<h2>Sources &amp; Citations</h2>
+<ul>
+  <li><a href="https://seo.co/ai/ai-content-citation/">https://seo.co/ai/ai-content-citation/</a></li>
+  <li><a href="https://storychief.io/blog/how-to-structure-your-content-so-llms-are-more-likely-to-cite-you">https://storychief.io/blog/how-to-structure-your-content-so-llms-are-more-likely-to-cite-you</a></li>
+  <li><a href="https://www.techmagnate.com/blog/llm-citation-guide/">https://www.techmagnate.com/blog/llm-citation-guide/</a></li>
+</ul>
     `
   },
   {
