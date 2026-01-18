@@ -1,4 +1,4 @@
-import { Phone, Building2, Leaf, Thermometer, Heart, MessageSquare, Home } from "lucide-react";
+import { Phone, Building2, Leaf, Thermometer, Heart, MessageSquare, Home, Car } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { getCalendlyUrlWithReferral } from "@/lib/referral";
@@ -40,6 +40,13 @@ const demos = [
     phone: "+1 (650) 718-5975",
     phoneRaw: "+16507185975",
     icon: Home,
+  },
+  {
+    title: "Car Service & Auto Repair – AI Appointment Coordinator",
+    description: "Answers calls 24/7, handles common service questions, captures customer details, and helps schedule appointments so no call turns into lost work.",
+    phone: "+1 (802) 471-1320",
+    phoneRaw: "+18024711320",
+    icon: Car,
   },
 ];
 
