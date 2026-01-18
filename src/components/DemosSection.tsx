@@ -1,4 +1,4 @@
-import { Phone, Building2, Leaf, Thermometer, Heart, MessageSquare } from "lucide-react";
+import { Phone, Building2, Leaf, Thermometer, Heart, MessageSquare, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { getCalendlyUrlWithReferral } from "@/lib/referral";
@@ -33,6 +33,13 @@ const demos = [
     phone: "+1 (901) 699-8438",
     phoneRaw: "+19016998438",
     icon: Heart,
+  },
+  {
+    title: "Real Estate – AI Receptionist & Lead Qualifier",
+    description: "Handles incoming calls 24/7, answers common questions, captures buyer and seller details, and qualifies leads before routing serious prospects to an agent or booking a callback.",
+    phone: "+1 (650) 718-5975",
+    phoneRaw: "+16507185975",
+    icon: Home,
   },
 ];
 
