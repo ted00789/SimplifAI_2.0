@@ -5,13 +5,41 @@ import { getPostBySlug } from "@/content/blogPosts";
 import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
 
+  // Generate FAQ Schema for SEO
+  const faqSchema = post?.faqItems ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
+
   return (
     <div className="min-h-screen bg-background">
+      {/* FAQ Schema Script for SEO */}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       {/* Global background effects */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-background" />
@@ -62,13 +90,39 @@ export default function BlogPost() {
                     prose-a:text-primary hover:prose-a:text-primary/80 
                     prose-table:my-8 prose-table:w-full
                     prose-th:text-foreground prose-th:font-semibold prose-th:text-left prose-th:p-3 prose-th:bg-muted/50 prose-th:border prose-th:border-border
-                    prose-td:text-muted-foreground prose-td:p-3 prose-td:border prose-td:border-border"
-                  dangerouslySetInnerHTML={{ __html: post.content }}
+                    prose-td:text-muted-foreground prose-td:p-3 prose-td:border prose-td:border-border
+                    [&_section]:mb-8"
+                  dangerouslySetInnerHTML={{ __html: post.content.replace('<!-- FAQ_SECTION -->', '') }}
                 />
               ) : (
                 <div className="prose prose-lg prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-table:text-muted-foreground prose-th:text-foreground prose-th:font-semibold prose-td:border-border prose-th:border-border">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
                 </div>
+              )}
+
+              {/* Interactive FAQ Section */}
+              {post.faqItems && post.faqItems.length > 0 && (
+                <section className="mt-12 pt-8 border-t border-border">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                    Frequently Asked Questions
+                  </h2>
+                  <Accordion type="single" collapsible className="w-full space-y-3">
+                    {post.faqItems.map((item, index) => (
+                      <AccordionItem 
+                        key={index} 
+                        value={`faq-${index}`}
+                        className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-xl px-5 data-[state=open]:bg-card/80"
+                      >
+                        <AccordionTrigger className="text-left text-foreground font-semibold hover:text-primary transition-colors py-4 [&[data-state=open]>svg]:rotate-180">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground pb-4 leading-relaxed">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </section>
               )}
             </article>
           ) : (
