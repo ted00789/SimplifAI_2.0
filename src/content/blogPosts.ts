@@ -11,6 +11,7 @@ export interface BlogPost {
   content: string;
   isHtml?: boolean;
   faqItems?: FAQItem[];
+  ogImage?: string;
 }
 
 export const blogPosts: BlogPost[] = [
