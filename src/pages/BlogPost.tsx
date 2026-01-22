@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { getPostBySlug } from "@/content/blogPosts";
-import { ArrowLeft } from "lucide-react";
+import { getPostBySlug, blogPosts } from "@/content/blogPosts";
+import { ArrowLeft, Clock, Calendar, Share2, Twitter, Linkedin, Link as LinkIcon, ChevronLeft, ChevronRight } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import {
@@ -11,10 +11,48 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
+
+// Calculate reading time based on word count
+const calculateReadingTime = (content: string): number => {
+  const wordsPerMinute = 200;
+  const textContent = content.replace(/<[^>]*>/g, '').replace(/[#*`]/g, '');
+  const wordCount = textContent.split(/\s+/).filter(word => word.length > 0).length;
+  return Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+};
+
+// Get adjacent posts for navigation
+const getAdjacentPosts = (currentSlug: string) => {
+  const currentIndex = blogPosts.findIndex(post => post.slug === currentSlug);
+  return {
+    previous: currentIndex > 0 ? blogPosts[currentIndex - 1] : null,
+    next: currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null,
+  };
+};
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
+  const adjacentPosts = slug ? getAdjacentPosts(slug) : { previous: null, next: null };
+  const readingTime = post ? calculateReadingTime(post.content) : 0;
+
+  // Share functionality
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareTitle = post?.title || '';
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(shareUrl);
+    toast.success("Link copied to clipboard!");
+  };
+
+  const handleShareTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareTitle)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
+  };
+
+  const handleShareLinkedIn = () => {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank');
+  };
 
   // Generate FAQ Schema for SEO
   const faqSchema = post?.faqItems ? {
@@ -30,9 +68,28 @@ export default function BlogPost() {
     }))
   } : null;
 
+  // Article Schema for SEO
+  const articleSchema = post ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Organization",
+      "name": "SimplifAI"
+    }
+  } : null;
+
   return (
     <div className="min-h-screen bg-background">
-      {/* FAQ Schema Script for SEO */}
+      {/* Schema Scripts for SEO */}
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
       {faqSchema && (
         <script
           type="application/ld+json"
@@ -49,74 +106,79 @@ export default function BlogPost() {
 
       <Navigation />
       
-      <main className="relative z-10 pt-24 md:pt-32">
-        <div className="section-container section-padding">
-          {/* Back Link */}
-          <Link
-            to="/blogs"
-            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Blogs
-          </Link>
-
+      <main className="relative z-10 pt-24 md:pt-32 pb-16 md:pb-24">
+        <div className="max-w-[800px] mx-auto px-6 md:px-8">
           {post ? (
-            <article className="max-w-3xl mx-auto">
-              {/* Post Header */}
-              <header className="mb-8 md:mb-12">
-                <time className="text-sm text-muted-foreground">
-                  {new Date(post.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}
-                </time>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-3">
+            <article className="blog-article">
+              {/* Header Section */}
+              <header className="mb-12 md:mb-16">
+                {/* Back Link */}
+                <Link
+                  to="/blogs"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 mb-6"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Blogs
+                </Link>
+
+                {/* Meta Info */}
+                <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+                  <span className="inline-flex items-center gap-1.5">
+                    <Calendar className="w-4 h-4" />
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </time>
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock className="w-4 h-4" />
+                    {readingTime} min read
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h1 className="text-[clamp(2rem,5vw,2.5rem)] font-bold text-foreground leading-[1.2] mb-8">
                   {post.title}
                 </h1>
+
+                {/* Excerpt */}
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-[65ch]">
+                  {post.excerpt}
+                </p>
               </header>
 
               {/* Post Content */}
               {post.isHtml ? (
                 <div 
-                  className="prose prose-lg prose-invert max-w-none 
-                    prose-headings:text-foreground prose-headings:font-bold
-                    prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-                    prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-                    prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
-                    prose-strong:text-foreground 
-                    prose-li:text-muted-foreground 
-                    prose-ul:my-4 prose-ul:pl-6
-                    prose-a:text-primary hover:prose-a:text-primary/80 
-                    prose-table:my-8 prose-table:w-full
-                    prose-th:text-foreground prose-th:font-semibold prose-th:text-left prose-th:p-3 prose-th:bg-muted/50 prose-th:border prose-th:border-border
-                    prose-td:text-muted-foreground prose-td:p-3 prose-td:border prose-td:border-border
-                    [&_section]:mb-8"
+                  className="blog-content"
                   dangerouslySetInnerHTML={{ __html: post.content.replace('<!-- FAQ_SECTION -->', '') }}
                 />
               ) : (
-                <div className="prose prose-lg prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-table:text-muted-foreground prose-th:text-foreground prose-th:font-semibold prose-td:border-border prose-th:border-border">
+                <div className="blog-content">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
                 </div>
               )}
 
               {/* Interactive FAQ Section */}
               {post.faqItems && post.faqItems.length > 0 && (
-                <section className="mt-12 pt-8 border-t border-border">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                <section className="mt-16 pt-12 border-t border-border">
+                  <h2 className="text-[2rem] font-bold text-foreground mb-8 leading-[1.3]">
                     Frequently Asked Questions
                   </h2>
-                  <Accordion type="single" collapsible className="w-full space-y-3">
+                  <Accordion type="single" collapsible className="w-full space-y-4">
                     {post.faqItems.map((item, index) => (
                       <AccordionItem 
                         key={index} 
                         value={`faq-${index}`}
-                        className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-xl px-5 data-[state=open]:bg-card/80"
+                        className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-xl px-6 data-[state=open]:bg-card/80 transition-colors"
                       >
-                        <AccordionTrigger className="text-left text-foreground font-semibold hover:text-primary transition-colors py-4 [&[data-state=open]>svg]:rotate-180">
+                        <AccordionTrigger className="text-left text-foreground font-semibold hover:text-primary transition-colors duration-200 py-5 text-lg [&[data-state=open]>svg]:rotate-180">
                           {item.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground pb-4 leading-relaxed">
+                        <AccordionContent className="text-muted-foreground pb-5 leading-relaxed text-[1.125rem]">
                           {item.answer}
                         </AccordionContent>
                       </AccordionItem>
@@ -124,6 +186,89 @@ export default function BlogPost() {
                   </Accordion>
                 </section>
               )}
+
+              {/* Bottom Section */}
+              <footer className="mt-16 pt-12 border-t border-border space-y-12">
+                {/* Share Section */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <span className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                    <Share2 className="w-4 h-4" />
+                    Share this article
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleShareTwitter}
+                      className="gap-2"
+                    >
+                      <Twitter className="w-4 h-4" />
+                      Twitter
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleShareLinkedIn}
+                      className="gap-2"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                      LinkedIn
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleCopyLink}
+                      className="gap-2"
+                    >
+                      <LinkIcon className="w-4 h-4" />
+                      Copy Link
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Post Navigation */}
+                <nav className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {adjacentPosts.previous && (
+                    <Link
+                      to={`/blogs/${adjacentPosts.previous.slug}`}
+                      className="group flex flex-col p-4 rounded-xl border border-border/50 bg-card/40 hover:bg-card/60 hover:border-primary/30 transition-all duration-200"
+                    >
+                      <span className="text-xs text-muted-foreground mb-2 flex items-center gap-1">
+                        <ChevronLeft className="w-3 h-3" />
+                        Previous Article
+                      </span>
+                      <span className="font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                        {adjacentPosts.previous.title}
+                      </span>
+                    </Link>
+                  )}
+                  {adjacentPosts.next && (
+                    <Link
+                      to={`/blogs/${adjacentPosts.next.slug}`}
+                      className="group flex flex-col p-4 rounded-xl border border-border/50 bg-card/40 hover:bg-card/60 hover:border-primary/30 transition-all duration-200 sm:text-right sm:ml-auto"
+                    >
+                      <span className="text-xs text-muted-foreground mb-2 flex items-center gap-1 sm:justify-end">
+                        Next Article
+                        <ChevronRight className="w-3 h-3" />
+                      </span>
+                      <span className="font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                        {adjacentPosts.next.title}
+                      </span>
+                    </Link>
+                  )}
+                </nav>
+
+                {/* Back to Blogs */}
+                <div className="text-center">
+                  <Link
+                    to="/blogs"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    Back to All Articles
+                  </Link>
+                </div>
+              </footer>
             </article>
           ) : (
             <div className="text-center py-16">
