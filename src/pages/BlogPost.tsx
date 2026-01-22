@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { getPostBySlug, blogPosts } from "@/content/blogPosts";
@@ -81,8 +82,39 @@ export default function BlogPost() {
     }
   } : null;
 
+  // Canonical URL
+  const canonicalUrl = `https://auto-lead-booker.lovable.app/blogs/${slug}`;
+  
+  // OG Image - use a default or post-specific image
+  const ogImage = post?.ogImage || 'https://auto-lead-booker.lovable.app/og-image.png';
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Dynamic Meta Tags for SEO */}
+      {post && (
+        <Helmet>
+          <title>{post.title} | SimplifAI Blog</title>
+          <meta name="description" content={post.excerpt} />
+          <link rel="canonical" href={canonicalUrl} />
+          
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:title" content={post.title} />
+          <meta property="og:description" content={post.excerpt} />
+          <meta property="og:image" content={ogImage} />
+          <meta property="og:site_name" content="SimplifAI" />
+          <meta property="article:published_time" content={post.date} />
+          
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:url" content={canonicalUrl} />
+          <meta name="twitter:title" content={post.title} />
+          <meta name="twitter:description" content={post.excerpt} />
+          <meta name="twitter:image" content={ogImage} />
+        </Helmet>
+      )}
+
       {/* Schema Scripts for SEO */}
       {articleSchema && (
         <script
