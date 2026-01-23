@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages SPA fallback:
+      // Store the route the user tried to visit, then redirect to the homepage
+      // so your React router can render the correct page.
+      sessionStorage.setItem("redirect", location.pathname + location.search + location.hash);
+      location.replace("/");
+    </script>
+  </head>
+  <body></body>
+</html>
