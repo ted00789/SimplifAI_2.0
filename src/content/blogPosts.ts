@@ -1,5 +1,3 @@
-import matter from "gray-matter";
-
 export interface FAQItem {
   question: string;
   answer: string;
@@ -17,31 +15,62 @@ export interface BlogPost {
 }
 
 /**
- * MARKDOWN POSTS (auto-loaded)
- * Location: src/content/blog/*.md
- *
- * Each .md file should start with:
+ * Tiny frontmatter parser (no dependencies).
+ * Supports:
  * ---
  * title: "..."
  * date: "YYYY-MM-DD"
  * excerpt: "..."
- * ogImage: "/path.png"     (optional)
+ * ogImage: "/path.png"
  * ---
- *
- * Then the markdown content below.
+ */
+function parseFrontmatter(raw: string): { data: Record<string, string>; content: string } {
+  const trimmed = raw.replace(/^\uFEFF/, ""); // remove BOM if present
+
+  if (!trimmed.startsWith("---")) {
+    return { data: {}, content: trimmed };
+  }
+
+  const end = trimmed.indexOf("\n---", 3);
+  if (end === -1) {
+    return { data: {}, content: trimmed };
+  }
+
+  const fmBlock = trimmed.slice(3, end).trim();
+  const body = trimmed.slice(end + "\n---".length).trimStart();
+
+  const data: Record<string, string> = {};
+  for (const line of fmBlock.split("\n")) {
+    const idx = line.indexOf(":");
+    if (idx === -1) continue;
+    const key = line.slice(0, idx).trim();
+    let val = line.slice(idx + 1).trim();
+
+    // strip quotes if present
+    val = val.replace(/^"(.*)"$/, "$1").replace(/^'(.*)'$/, "$1");
+
+    if (key) data[key] = val;
+  }
+
+  return { data, content: body };
+}
+
+/**
+ * MARKDOWN POSTS (auto-loaded)
+ * Location: src/content/blog/*.md
  */
 const mdModules = import.meta.glob("./blog/*.md", { as: "raw", eager: true });
 
 const markdownPosts: BlogPost[] = Object.entries(mdModules).map(([path, raw]) => {
   const slug = path.split("/").pop()!.replace(".md", "");
-  const { data, content } = matter(raw as string);
+  const { data, content } = parseFrontmatter(raw as string);
 
   return {
     slug,
     title: String(data.title ?? slug),
     date: String(data.date ?? ""),
     excerpt: String(data.excerpt ?? ""),
-    content, // markdown content
+    content, // markdown body only
     isHtml: false,
     ogImage: data.ogImage ? String(data.ogImage) : undefined,
   };
@@ -126,66 +155,6 @@ const hardcodedPosts: BlogPost[] = [
   </section>
 
   <section>
-    <h2>Why Speed of Response Changes Everything</h2>
-    <p>Speed is one of the most underrated advantages in business, especially when it comes to inbound calls.</p>
-
-    <h3>First Response Often Wins the Job</h3>
-    <p>When a customer calls multiple businesses, the one that answers first usually sets the tone. Even if your competitors are equally skilled, being the first to respond gives you a massive edge.</p>
-    <p>An AI receptionist ensures you are always first, even when you are busy, asleep, or offline.</p>
-
-    <h3>After-Hours Calls Are High-Intent</h3>
-    <p>Calls that come in after hours are often more serious. These callers are actively trying to solve a problem, not casually shopping around.</p>
-    <p>By using an AI receptionist, you capture these high-intent leads instead of letting them disappear overnight.</p>
-  </section>
-
-  <section>
-    <h2>Real-World Impact on Small Businesses</h2>
-    <p>The biggest difference an AI receptionist makes is not theoretical. It shows up in daily operations and long-term growth.</p>
-
-    <h3>Before Using an AI Receptionist</h3>
-    <p>Many small businesses experience:</p>
-    <ul>
-      <li>Frequent missed calls</li>
-      <li>Stress from constant interruptions</li>
-      <li>Late-night call-backs</li>
-      <li>Incomplete or forgotten lead details</li>
-    </ul>
-    <p>Even with great service, this creates friction that slowly limits growth.</p>
-
-    <h3>After Implementing an AI Receptionist</h3>
-    <p>With an AI receptionist in place:</p>
-    <ul>
-      <li>Every call is answered</li>
-      <li>Leads are logged automatically</li>
-      <li>Follow-ups are more effective</li>
-      <li>The owner regains focus and control</li>
-    </ul>
-    <p>The business does not change what it offers. It simply stops leaking opportunities.</p>
-  </section>
-
-  <section>
-    <h2>It Supports Your Team Instead of Replacing Them</h2>
-    <p>One common concern is whether an AI receptionist feels impersonal. In reality, it often improves the human experience for both staff and customers.</p>
-
-    <h3>Acting as a Digital Front Desk</h3>
-    <p>The AI receptionist handles the first interaction, filtering calls and gathering information. Your team steps in only when their expertise is truly needed.</p>
-    <p>This creates a smoother workflow where humans focus on high-value conversations instead of constant interruptions.</p>
-
-    <h3>Customers Care About Help, Not Technology</h3>
-    <p>Most callers do not care whether the first voice they hear is human or AI. They care about clarity, speed, and being taken seriously.</p>
-    <p>When those needs are met, trust builds naturally.</p>
-  </section>
-
-  <section>
-    <h2>The Mental Relief Business Owners Don't Expect</h2>
-    <p>Beyond revenue, one of the biggest benefits of an AI receptionist is psychological.</p>
-
-    <h3>Fewer Interruptions, Better Focus</h3>
-    <p>Constant calls break concentration and slow down work. Over time, this leads to fatigue and frustration.</p>
-    <p>By letting an AI receptionist handle incoming calls, you protect your attention and energy, which improves both productivity and decision-making.</p>
-  </section>
-
-  <section>
     <h2>Conclusion: Is an AI Receptionist Worth It?</h2>
     <p>An AI receptionist helps your business by answering every call, responding instantly, capturing real opportunities, and giving you back control of your time and attention.</p>
   </section>
@@ -237,9 +206,77 @@ const hardcodedPosts: BlogPost[] = [
     ],
   },
 
-  // Keep your other existing 3 posts exactly as they are:
-  // Paste them here unchanged (ai-receptionist-service-businesses, missed-call-recovery-strategies, lead-qualification-automation)
-  // from your current file.
+  {
+    slug: "ai-receptionist-service-businesses",
+    title: "How AI Receptionists Are Transforming Service Businesses in 2024",
+    date: "2024-01-15",
+    excerpt:
+      "Discover how AI-powered phone systems are helping HVAC, plumbing, and home service companies capture more leads and book more jobs around the clock.",
+    isHtml: false,
+    content: `
+# How AI Receptionists Are Transforming Service Businesses in 2024
+
+Running a service business is tough. You're out in the field, your hands are dirty, and your phone won't stop ringing. Every missed call could be a $500 job walking away. That's where AI receptionists come in.
+
+## What Is an AI Receptionist?
+
+An AI receptionist is a smart phone system that answers calls just like a real person. It can:
+
+- Greet callers professionally
+- Ask what service they need
+- Collect their contact information
+- Book appointments directly into your calendar
+- Answer common questions about your services
+
+The best part? It works 24/7, never takes a lunch break, and never calls in sick.
+
+## The Bottom Line
+
+Every missed call is money left on the table. An AI receptionist makes sure you never miss another opportunity.
+    `,
+  },
+
+  {
+    slug: "missed-call-recovery-strategies",
+    title: "5 Proven Strategies to Recover Missed Call Leads",
+    date: "2024-01-10",
+    excerpt:
+      "Learn practical techniques to follow up on missed calls and convert those leads into paying customers before your competition does.",
+    isHtml: false,
+    content: `
+# 5 Proven Strategies to Recover Missed Call Leads
+
+You checked your phone after a busy morning and saw three missed calls. No voicemails. No texts.
+
+## Strategy 1: Instant Text-Back
+
+Send an automatic text within seconds:
+"Sorry we missed your call — what can we help with?"
+
+## The real cost
+
+Miss a few calls a week and it quietly becomes thousands per month in lost revenue.
+    `,
+  },
+
+  {
+    slug: "lead-qualification-automation",
+    title: "Automating Lead Qualification: A Guide for Service Businesses",
+    date: "2024-01-05",
+    excerpt:
+      "Not every lead is worth your time. Learn how to use automation to qualify leads, filter out tire-kickers, and focus on the jobs that actually pay.",
+    isHtml: false,
+    content: `
+# Automating Lead Qualification: A Guide for Service Businesses
+
+Lead qualification means figuring out:
+- Are they ready to buy?
+- Can they afford it?
+- Is it a good fit?
+
+Qualify leads upfront so you only visit the ones likely to book.
+    `,
+  },
 ];
 
 /**
