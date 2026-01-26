@@ -45,7 +45,7 @@ A qualified lead usually meets basic criteria such as:
 Write these rules down. These rules become the logic your automation follows.
 
 If you want a simple explanation of how lead qualification frameworks work, this video breaks it down clearly:
-https://www.youtube.com/watch?v=K7G9JzKpX3c
+[https://www.youtube.com/watch?v=K7G9JzKpX3c](https://www.youtube.com/watch?v=SBG9RM0mx6I)
 
 ### Step 2: Ask Only the Questions That Matter
 
@@ -59,7 +59,7 @@ Start with the essentials:
 Avoid asking unnecessary questions upfront. The goal is to move the lead forward, not overwhelm them.
 
 This tutorial shows how to design simple qualification questions that do not scare leads away:
-https://www.youtube.com/watch?v=Y2RzY2p3KxE
+[https://www.youtube.com/watch?v=Y2RzY2p3KxE](https://www.youtube.com/watch?v=VuXrvncln_s)
 
 ### Step 3: Route Leads Based on Their Answers
 
@@ -73,7 +73,7 @@ Examples:
 This is where automation saves the most time.
 
 If you want to see how conditional routing works in practice, this video shows a real example using automation tools:
-https://www.youtube.com/watch?v=Hk5xKp0YkJQ
+[https://www.youtube.com/watch?v=Hk5xKp0YkJQ](https://www.youtube.com/watch?v=hnzJn4XdcO0)
 
 ## Real-World Example
 
@@ -84,7 +84,7 @@ They added automated lead qualification to their calls and forms. The system ask
 Within days, the owner spent less time on the phone and more time on paid work.
 
 If you want to see a similar setup in action, this walkthrough shows how automated qualification works end to end:
-https://www.youtube.com/watch?v=9UeZkRZyWbM
+[https://www.youtube.com/watch?v=9UeZkRZyWbM](https://www.youtube.com/watch?v=9QtFwPSLxbw)
 
 ## Common Mistakes to Avoid
 
@@ -96,7 +96,7 @@ https://www.youtube.com/watch?v=9UeZkRZyWbM
 The best systems feel invisible. If your automation feels confusing, people will drop off.
 
 This short video explains common mistakes businesses make when automating customer interactions:
-https://www.youtube.com/watch?v=Jp0JkY8nP6A
+[https://www.youtube.com/watch?v=Jp0JkY8nP6A](https://www.youtube.com/watch?v=ICBMbrQI8Ts)
 
 ## Final Takeaway
 
