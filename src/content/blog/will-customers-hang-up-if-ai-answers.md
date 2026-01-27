@@ -38,24 +38,22 @@ People do not call businesses for fun.
 
 They call because they want something now:
 
-- a quote
-- a booking
-- a price
-- help today
+- a quote  
+- a booking  
+- a price  
+- help today  
 
 People hang up when they feel stuck.
 
 That usually happens because of:
 
-- voicemail
-- long hold times
-- confusing phone menus
-- too many questions at once
-- no clear next step
+- voicemail  
+- long hold times  
+- confusing phone menus  
+- too many questions at once  
+- no clear next step  
 
-According to Invoca, many callers abandon calls when they expect long waits or poor call experiences.  
-Speed and clarity matter more than almost anything else.  
-https://www.invoca.com/blog/missed-calls-revenue-impact
+According to [Invoca’s research on missed calls], many callers abandon calls when they expect long waits or poor call experiences. Speed and clarity matter more than almost anything else.
 
 The real question is not “Is it AI?”
 
@@ -63,8 +61,9 @@ The real question is “Does this call feel fast and helpful?”
 
 ## Speed Matters More Than Who Answers
 
-One of the most cited lead response studies from Lead Response Management found that responding within five minutes makes you up to **100 times more likely** to connect with a lead than responding later.  
-https://www.leadresponsemanagement.org/lrm_study
+One of the most cited lead response studies from Lead Response Management found that responding within five minutes makes you up to **100 times more likely** to connect with a lead than responding later.
+
+You can review the data directly in the [Lead Response Management study].
 
 That is a massive difference.
 
@@ -131,9 +130,9 @@ Example:
 
 Examples:
 
-- “I can book that for you now.”
-- “I’ll text you a link to choose a time.”
-- “I’ll pass this to the team and they’ll call you back shortly.”
+- “I can book that for you now.”  
+- “I’ll text you a link to choose a time.”  
+- “I’ll pass this to the team and they’ll call you back shortly.”  
 
 ### Always allow an escape
 
@@ -146,9 +145,9 @@ The AI should be able to transfer the call or take a message.
 
 Older callers are more sensitive to:
 
-- fast talking
-- long explanations
-- confusing questions
+- fast talking  
+- long explanations  
+- confusing questions  
 
 But when AI speaks slowly and clearly, many older callers stay on the line.
 
@@ -161,15 +160,15 @@ The problem is confusion.
 These are live AI receptionist demos you can test.
 
 **Car detailing business demo**  
-Watch the demo: https://www.instagram.com/reel/DT89EL3ALlB/  
+[Watch the car detailing AI receptionist demo]  
 Call the demo line: **(878) 879-2272**
 
 **Lawn care business demo**  
-Watch the demo: https://www.instagram.com/reel/DS5qE1TkmF0/  
+[Watch the lawn care AI receptionist demo]  
 Call the demo line: **(878) 879-2399**
 
 **Real estate business demo**  
-Watch the demo: https://www.instagram.com/reel/DTY5Lx1gOn9/  
+[Watch the real estate AI receptionist demo]  
 Call the demo line: **(901) 460-9886**
 
 Listen like a real customer.
@@ -182,8 +181,7 @@ This sounds backwards, but it is true.
 
 Many businesses lose calls simply because nobody answers.
 
-Invoca reports that missed calls cost businesses real revenue because callers rarely try again.  
-https://www.invoca.com/blog/missed-calls-revenue-impact
+According to [Invoca’s data on missed call revenue], callers rarely try again after a missed call.
 
 Replacing voicemail with instant answers already saves calls.
 
@@ -223,3 +221,10 @@ People hang up when they feel stuck.
 If your AI answers fast, sounds normal, and helps them move forward, most callers stay.
 
 And you stop losing the calls you never even had a chance to answer.
+
+[Invoca’s research on missed calls]: https://www.invoca.com/blog/missed-calls-revenue-impact
+[Lead Response Management study]: https://www.leadresponsemanagement.org/lrm_study
+[Invoca’s data on missed call revenue]: https://www.invoca.com/blog/missed-calls-revenue-impact
+[Watch the car detailing AI receptionist demo]: https://www.instagram.com/reel/DT89EL3ALlB/
+[Watch the lawn care AI receptionist demo]: https://www.instagram.com/reel/DS5qE1TkmF0/
+[Watch the real estate AI receptionist demo]: https://www.instagram.com/reel/DTY5Lx1gOn9/
