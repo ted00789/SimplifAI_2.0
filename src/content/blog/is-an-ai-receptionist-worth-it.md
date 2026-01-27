@@ -104,31 +104,74 @@ and these
 
 Even missing one job per week can cost thousands over a year.
 
-## Real-World Examples
+## Real-World Demo Examples
 
-This is already working in real businesses.
+These are real systems you can see and test.
 
-Here is a real example of an AI receptionist answering calls for a car detailing business and booking jobs automatically:  
-[Watch the car detailing AI receptionist demo](https://www.instagram.com/reel/DT89EL3ALlB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
+Car detailing business demo:  
+[Watch the car detailing AI receptionist demo](https://www.instagram.com/reel/DT89EL3ALlB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)  
+Call the demo line: **(878) 879-2272**
 
-Here is how a real estate agency captures and qualifies inbound calls without agents answering every time:  
-[See the real estate AI receptionist in action](https://www.instagram.com/reel/DTY5Lx1gOn9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
+Lawn care business demo:  
+[Watch the lawn care AI receptionist demo](https://www.instagram.com/reel/DS5qE1TkmF0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)  
+Call the demo line: **(878) 879-2399**
 
-And here is a lawn care business handling after-hours calls so no leads are lost overnight:  
-[Watch the lawn care AI receptionist demo](https://www.instagram.com/reel/DS5qE1TkmF0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
+Real estate business demo:  
+[Watch the real estate AI receptionist demo](https://www.instagram.com/reel/DTY5Lx1gOn9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)  
+Call the demo line: **(901) 460-9886**
 
-These are real calls, real leads, and real revenue.
+These are live systems answering real calls.
 
-## Common Mistakes to Avoid
+## TL;DR
 
-- Making the AI sound robotic  
-- Asking too many questions at once  
-- Not offering a clear next step  
-- Ignoring urgency  
-- Skipping real-world testing  
+- Most businesses miss calls because they are busy, not careless  
+- Missed calls usually mean missed money  
+- Most callers never try again if no one answers  
+- An AI receptionist answers every call automatically  
+- It captures leads, books jobs, and works 24/7  
+- It costs far less than hiring staff  
 
-Callers decide fast.  
-If the experience feels slow or confusing, they hang up.
+## Frequently Asked Questions
+
+### What is an AI receptionist?
+
+An AI receptionist is a system that answers your business calls automatically.  
+It talks to callers, asks why they are calling, captures their information, and can book appointments or send messages to you.
+
+### Is an AI receptionist better than voicemail?
+
+Yes. Voicemail still misses most opportunities because many callers never leave a message.  
+An AI receptionist answers instantly and keeps the caller engaged instead of letting them hang up.
+
+### How much does an AI receptionist usually cost?
+
+Most AI receptionists cost a few hundred dollars per month.  
+That is much cheaper than hiring a receptionist, which often costs several thousand dollars per month with payroll and taxes.
+
+### Can customers tell they are talking to AI?
+
+If the system is built correctly, most callers cannot tell or do not care.  
+They care that someone answers fast and helps them, not whether it is a human or AI.
+
+### What happens if the AI cannot handle a call?
+
+When a call is too complex or urgent, the AI transfers it or sends you the details instantly.  
+It is designed to know its limits and involve a human when needed.
+
+### Is an AI receptionist hard to set up?
+
+No. Most systems can be set up in a few days.  
+Once live, it runs automatically in the background with very little maintenance.
+
+### What types of businesses benefit the most from an AI receptionist?
+
+Service businesses benefit the most.  
+This includes car detailing, lawn care, HVAC, real estate, clinics, salons, and contractors who miss calls while working.
+
+### Will an AI receptionist replace my staff?
+
+No. It supports your staff instead of replacing them.  
+It handles calls so your team can focus on real work instead of interrupting their day to answer the phone.
 
 ## Final Takeaway
 
