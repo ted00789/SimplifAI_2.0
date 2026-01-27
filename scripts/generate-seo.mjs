@@ -55,8 +55,22 @@ function escapeXml(str) {
 }
 
 function normalizeUrl(u) {
+  // Remove trailing slash for non-root URLs to keep sitemap consistent
   if (u.endsWith("/") && u !== SITE_URL + "/") return u.slice(0, -1);
   return u;
+}
+
+function todayISO() {
+  // YYYY-MM-DD
+  return new Date().toISOString().slice(0, 10);
+}
+
+function sanitizeLastmod(value) {
+  // Accept only YYYY-MM-DD; otherwise fallback to today.
+  if (typeof value !== "string") return todayISO();
+  const v = value.trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(v)) return v;
+  return todayISO();
 }
 
 function writeRobotsTxt() {
@@ -78,11 +92,16 @@ Sitemap: ${SITE_URL}/sitemap.xml
     const slug = path.basename(filePath, ".md");
     const raw = fs.readFileSync(filePath, "utf8");
     const { data } = parseFrontmatter(raw);
-    const date = data.date || "";
-    return { slug, date, raw };
+
+    // IMPORTANT:
+    // Ensure every post has a valid lastmod so Google sees consistent freshness signals.
+    // If frontmatter doesn't include date, we use today's date.
+    const lastmod = sanitizeLastmod(data.date || "");
+
+    return { slug, lastmod, raw };
   });
 
-  // Copy raw markdown to /public/blogs-md
+  // Copy raw markdown to /public/blogs-md (useful for AI crawling / debugging)
   for (const p of posts) {
     const dest = path.join(BLOGS_MD_DIR, `${p.slug}.md`);
     fs.writeFileSync(dest, p.raw, "utf8");
@@ -90,11 +109,14 @@ Sitemap: ${SITE_URL}/sitemap.xml
 
   // Generate sitemap.xml
   const urls = [
-    { loc: `${SITE_URL}/`, lastmod: "" },
-    { loc: `${SITE_URL}/blogs`, lastmod: "" },
+    // Home + blog index: give them a lastmod too (helps recrawl)
+    { loc: `${SITE_URL}/`, lastmod: todayISO() },
+    { loc: `${SITE_URL}/blogs`, lastmod: todayISO() },
+
+    // Blog posts
     ...posts.map((p) => ({
       loc: `${SITE_URL}/blogs/${p.slug}`,
-      lastmod: p.date || "",
+      lastmod: p.lastmod,
     })),
   ];
 
@@ -104,7 +126,9 @@ Sitemap: ${SITE_URL}/sitemap.xml
     urls
       .map((u) => {
         const loc = escapeXml(normalizeUrl(u.loc));
-        const lastmod = u.lastmod ? `<lastmod>${escapeXml(u.lastmod)}</lastmod>` : "";
+        const lastmod = u.lastmod
+          ? `<lastmod>${escapeXml(u.lastmod)}</lastmod>`
+          : "";
         return `  <url><loc>${loc}</loc>${lastmod}</url>`;
       })
       .join("\n") +
