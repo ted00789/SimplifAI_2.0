@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { execSync } from "child_process";
 
 const SITE_URL = "https://simplifai-solutions.com";
 
@@ -65,12 +66,32 @@ function todayISO() {
   return new Date().toISOString().slice(0, 10);
 }
 
-function sanitizeLastmod(value) {
+function sanitizeYMD(value) {
   // Accept only YYYY-MM-DD; otherwise fallback to today.
   if (typeof value !== "string") return todayISO();
   const v = value.trim();
   if (/^\d{4}-\d{2}-\d{2}$/.test(v)) return v;
   return todayISO();
+}
+
+function gitLastModifiedISO(filePath) {
+  try {
+    // Most recent commit date that touched this file (ISO 8601)
+    const out = execSync(`git log -1 --format=%cI -- "${filePath}"`, {
+      stdio: ["ignore", "pipe", "ignore"],
+    })
+      .toString()
+      .trim();
+    return out || "";
+  } catch {
+    return "";
+  }
+}
+
+function gitLastModifiedYMD(filePath) {
+  const iso = gitLastModifiedISO(filePath);
+  if (!iso) return "";
+  return iso.slice(0, 10); // YYYY-MM-DD
 }
 
 function writeRobotsTxt() {
@@ -93,10 +114,12 @@ Sitemap: ${SITE_URL}/sitemap.xml
     const raw = fs.readFileSync(filePath, "utf8");
     const { data } = parseFrontmatter(raw);
 
-    // IMPORTANT:
-    // Ensure every post has a valid lastmod so Google sees consistent freshness signals.
-    // If frontmatter doesn't include date, we use today's date.
-    const lastmod = sanitizeLastmod(data.date || "");
+    // Publish date = frontmatter date (keeps your original publish date stable)
+    const publishDate = sanitizeYMD(data.date || "");
+
+    // Last modified date = last git commit that touched the file (auto-updates on edits)
+    // Fallback to publishDate if git isn't available for some reason
+    const lastmod = sanitizeYMD(gitLastModifiedYMD(filePath) || publishDate);
 
     return { slug, lastmod, raw };
   });
