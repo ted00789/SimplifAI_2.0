@@ -1,6 +1,6 @@
 ---
 title: "Is an AI Receptionist Worth It for Your Business?"
-date: "2026-01-27"
+date: "2026-01-26"
 excerpt: "If you miss calls, feel glued to your phone, or worry about lost leads, this post breaks down whether an AI receptionist is actually worth it for your business."
 ---
 
@@ -99,9 +99,8 @@ Businesses that respond to leads quickly see **huge differences** in results.
 - Hiring a receptionist often costs **$3,000–$4,000 per month**  
 - An AI receptionist usually costs **a few hundred dollars per month**  
 
-You can calculate this for yourself.
-
 Helpful resources:
+
 - <a href="https://www.leadresponsemanagement.org/lrm_study" target="_blank" rel="noopener noreferrer">Lead response timing research</a>  
 - <a href="https://www.hubspot.com/sales/statistics" target="_blank" rel="noopener noreferrer">HubSpot sales and conversion statistics</a>  
 
@@ -109,7 +108,8 @@ Even missing **one job per week** can cost thousands over a year.
 
 ## Real-World Demo Examples
 
-Below are real demo examples showing how this works in practice.
+These are **live demos** of real AI receptionists.  
+You can watch the videos — or call the numbers yourself.
 
 ### Car Detailing Example
 
@@ -119,17 +119,10 @@ Below are real demo examples showing how this works in practice.
 Watch the car detailing AI receptionist demo
 </a>
 
+**Want to try it yourself?**  
+Call: **(878) 879-2272**
+
 This AI answers calls while the owner is working on vehicles and books jobs automatically.
-
-### Real Estate Example
-
-![AI receptionist call demo for real estate agency](/blog-images/real-estate-ai-receptionist.png)
-
-<a href="https://www.instagram.com/reel/DT0jQkQgJsp/" target="_blank" rel="noopener noreferrer">
-Watch the real estate AI receptionist demo
-</a>
-
-Here, the AI acts as the first line of defense, capturing buyer and renter information before passing leads to agents.
 
 ### Lawn Care Example
 
@@ -139,7 +132,23 @@ Here, the AI acts as the first line of defense, capturing buyer and renter infor
 Watch the lawn care AI receptionist demo
 </a>
 
+**Want to try it yourself?**  
+Call: **(878) 879-2399**
+
 The AI answers calls during jobs and after hours, making sure no request is missed.
+
+### Real Estate Example
+
+![AI receptionist call demo for real estate business](/blog-images/real-estate-ai-receptionist.png)
+
+<a href="https://www.instagram.com/reel/DTY5Lx1gOn9/" target="_blank" rel="noopener noreferrer">
+Watch the real estate AI receptionist demo
+</a>
+
+**Want to try it yourself?**  
+Call: **(901) 460-9886**
+
+Here, the AI captures buyer and renter information before passing leads to an agent.
 
 ## TL;DR
 
