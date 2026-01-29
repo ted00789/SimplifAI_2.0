@@ -10,7 +10,7 @@ readTime: 10 min read
 **Quick answer:**  
 An AI receptionist answers every incoming call, captures lead information, and moves inquiries forward without interrupting your agents. This gives your team time back to focus on showings, negotiations, and closing deals faster — backed by real industry data showing why speed wins in real estate.
 
-![Real estate agent closing a home sale](/images/blogs/ai-receptionist-real-estate/real-estate-deal-closed.jpg)
+![AI receptionist handling real estate calls in an office](/images/blogs/ai-receptionist-real-estate/ai-receptionist-office.jpeg)
 
 ---
 
@@ -51,7 +51,7 @@ After-hours calls make this even worse, which is why many agencies rely on syste
 
 ## 🤖 What an AI receptionist actually does
 
-![AI receptionist vs human receptionist comparison](/images/blogs/ai-receptionist-real-estate/ai-vs-human-receptionist.jpg)
+![AI receptionist vs human receptionist comparison](/images/blogs/ai-receptionist-real-estate/ai-vs-human-receptionist.jpeg)
 
 An AI receptionist isn’t just an answering machine.
 
@@ -106,7 +106,7 @@ For real estate, the answer is increasingly clear.
 
 ## 💸 The real cost of missed calls
 
-![Real estate agent standing in front of a sold home](/images/blogs/ai-receptionist-real-estate/real-estate-agent-sold-home.jpg)
+![Real estate agent standing in front of a sold home](/images/blogs/ai-receptionist-real-estate/real-estate-agent-sold-home.jpeg)
 
 Calls are not just conversations — they’re revenue events.
 
@@ -132,7 +132,7 @@ In practice, speed and clarity matter more than who answers first.
 ---
 
 ## 🏘 How AI handles different real estate calls
-![AI receptionist handling real estate calls in an office](/images/blogs/ai-receptionist-real-estate/ai-receptionist-office.jpg)
+![AI receptionist handling real estate calls in an office](/images/blogs/ai-receptionist-real-estate/ai-receptionist-office.jpeg)
 
 AI receptionists handle:
 - Buyer inquiries  
