@@ -144,6 +144,7 @@ This cost comparison is explored in more detail in [AI receptionist vs human rec
 
 ## ⏱️ Why Speed Beats Perfection in Car Detailing
 ![Speed to lead with AI receptionist for car detailing businesses](https://www.simplifai-solutions.com/images/blogs/ai-receptionist-for-car-detailing-companies/speed-ai-leads.jpeg)
+
 Customers do not expect a perfect conversation.
 
 They expect a fast one.
