@@ -1,6 +1,7 @@
 ---
 title: 🚗🤖 How an AI Receptionist Helps Car Detailing Companies Capture More Jobs
 description: Learn how AI receptionists help car detailing businesses stop missing calls, capture more leads, and increase revenue using real data, studies, and ROI examples.
+excerpt: "Missed calls cost car detailing businesses real money. This guide explains how an AI receptionist answers every call, books more jobs, and helps you grow without hiring extra staff."
 date: 2026-01-29
 author: Tadeas Manas
 readTime: 11 min read
