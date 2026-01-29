@@ -106,7 +106,7 @@ For real estate, the answer is increasingly clear.
 
 ## 💸 The real cost of missed calls
 
-![Real estate agent standing in front of a sold home](/public/images/blogs/ai-receptionist-real-estate/real-estate-agent-sold-home-illustration.jpeg)
+![Real estate agent standing in front of a sold home](/public/images/blogs/ai-receptionist-real-estate/real-estate-deal-closed.jpeg)
 
 Calls are not just conversations — they’re revenue events.
 
