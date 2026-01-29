@@ -16,7 +16,7 @@ You’re washing a car.
 You’re driving to the next job.
 You’re already talking to another customer.
 So the call goes unanswered.
-Studies show that service businesses miss between **25–35%** (and up to 40% in some cases) of inbound calls, especially during peak work hours and after hours [](https://www.callrail.com/blog/missed-calls-costing-your-business).
+Studies show that small and service businesses answer only about **38%** of inbound calls (meaning ~62% are missed, go to voicemail, or receive no response), especially during peak work hours and after hours [](https://www.nextiva.com/blog/whats-the-cost-of-missed-calls.html).
 For car detailing, this hurts more than most industries.
 When someone calls a detailer, they are usually ready to book. They are not browsing or researching for weeks. They want availability and pricing now.
 > Missed calls don’t feel dangerous.
