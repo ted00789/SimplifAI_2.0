@@ -1,46 +1,63 @@
-// TEMP DEBUG: show exactly who triggers scroll/focus
-const _scrollTo = window.scrollTo.bind(window);
-window.scrollTo = (...args: any[]) => {
-  console.trace("🚨 window.scrollTo called", args);
-  return _scrollTo(...args);
-};
+// src/main.tsx
 
-const _scrollIntoView = Element.prototype.scrollIntoView;
-Element.prototype.scrollIntoView = function (...args: any[]) {
-  console.trace("🚨 scrollIntoView called on:", this, args);
-  // @ts-ignore
-  return _scrollIntoView.apply(this, args);
-};
+// --- Stop the “loads then scrolls down” issue ---
+// Root cause: something calls focus() shortly after load, which scrolls the page.
+// We temporarily block programmatic focus during initial load (or until user interacts).
 
-const _focus = HTMLElement.prototype.focus;
-HTMLElement.prototype.focus = function (...args: any[]) {
-  console.trace("🚨 focus() called on:", this, args);
-  // @ts-ignore
-  return _focus.apply(this, args);
-};
+(() => {
+  const blockMs = 2500; // adjust if needed
+  const start = performance.now();
+
+  const originalFocus = HTMLElement.prototype.focus;
+
+  HTMLElement.prototype.focus = function (...args: any[]) {
+    const elapsed = performance.now() - start;
+    const isInitialLoad = elapsed < blockMs;
+
+    if (isInitialLoad) {
+      // Ignore focus calls during the first ~2.5s (prevents scroll jump)
+      return;
+    }
+
+    // @ts-ignore
+    return originalFocus.apply(this, args);
+  };
+
+  // As soon as the user interacts, restore normal focus immediately
+  const enable = () => {
+    HTMLElement.prototype.focus = originalFocus;
+    window.removeEventListener("pointerdown", enable, true);
+    window.removeEventListener("keydown", enable, true);
+    window.removeEventListener("touchstart", enable, true);
+  };
+
+  window.addEventListener("pointerdown", enable, true);
+  window.addEventListener("keydown", enable, true);
+  window.addEventListener("touchstart", enable, true);
+})();
+
+// Also prevent browser scroll restoration
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
 
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.css";
 
-// Optional but good: don't restore scroll
-if ("scrollRestoration" in window.history) {
-  window.history.scrollRestoration = "manual";
-}
-
 // Handle redirect (GH pages / 404 fallback)
 const redirect = sessionStorage.getItem("redirect");
 if (redirect) {
   sessionStorage.removeItem("redirect");
 
-  // IMPORTANT: remove any hash that could jump to an anchor
+  // Remove any hash that could jump to an anchor
   const url = new URL(redirect, window.location.origin);
   url.hash = "";
 
   window.history.replaceState(null, "", url.pathname + url.search);
 
-  // Scroll to top immediately
+  // Go to top immediately
   window.scrollTo(0, 0);
 }
 
@@ -50,9 +67,9 @@ createRoot(document.getElementById("root")!).render(
   </HelmetProvider>
 );
 
-// Scroll to top again after React paints (kills the “1 second later” jump)
+// Ensure we're at the top after mount/paint
 requestAnimationFrame(() => {
   requestAnimationFrame(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   });
 });
