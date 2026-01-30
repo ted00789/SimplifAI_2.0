@@ -89,6 +89,50 @@ And that is a conservative estimate.
 
 Many businesses miss far more than that.
 
+Here’s what missed calls actually cost most service businesses over time:
+
+| Missed Calls per Week | Avg Job Value | Lost Jobs per Month | Monthly Revenue Lost | Yearly Revenue Lost |
+|----------------------|---------------|---------------------|----------------------|---------------------|
+| 2                    | $150          | 4                   | $600                 | $7,200              |
+| 3                    | $200          | 6                   | $1,200               | $14,400             |
+| 5                    | $250          | 10                  | $2,500               | $30,000             |
+| 8                    | $300          | 16                  | $4,800               | $57,600             |
+
+
+
+## 🧮 Self-Check: What Are Missed Calls Costing You Each Month?
+
+Use this table to estimate how much revenue you may be losing from missed calls.  
+You do not need exact numbers. Honest estimates are enough.
+
+| Question | Your Answer |
+|--------|------------|
+| Average value of one job ($) | ______ |
+| Calls you miss per week | ______ |
+| Percentage of missed callers who would book (%) | ______ |
+| Missed jobs per month (calls × 4 × booking %) | ______ |
+| Estimated revenue lost per month ($) | ______ |
+| Estimated revenue lost per year ($) | ______ |
+
+### How to fill this out
+
+- **Average value of one job:** Use what most customers pay you, not your highest package  
+- **Calls you miss per week:** Include calls during the day, while driving, and after hours  
+- **Booking percentage:** A conservative estimate is 30 to 50 percent  
+- **Missed jobs per month:** Calls missed × 4 weeks × booking percentage  
+- **Revenue lost per month:** Missed jobs × average job value  
+- **Revenue lost per year:** Monthly loss × 12  
+
+**Example:**  
+If your average job is $200, you miss 3 calls per week, and 40 percent of those callers would book:
+
+- Missed jobs per month: about 5  
+- Revenue lost per month: about $1,000  
+- Revenue lost per year: about $12,000  
+
+Most business owners are surprised when they see the yearly number written down.
+
+
 ---
 
 ## 🧠 Why Missed Calls Happen During the Day
@@ -189,6 +233,18 @@ They protect it.
 
 You can see how this works in practice here:  
 [Never Miss a Call With an AI Receptionist](https://simplifai-solutions.com/blogs/never-miss-a-call-ai-receptionist).
+
+Here’s how answering every call changes the business, even without adding staff:
+
+| Metric                         | Missing Calls Regularly | Calls Always Answered |
+|--------------------------------|-------------------------|-----------------------|
+| Lead response time              | 2–24 hours              | Instant               |
+| Booking conversion rate         | Low                      | High                  |
+| Customer frustration            | High                     | Low                   |
+| Reviews and referrals           | Inconsistent             | More frequent         |
+| Revenue predictability          | Unstable                 | More stable           |
+| Owner stress level              | High                     | Lower                 |
+
 
 ---
 
