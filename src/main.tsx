@@ -1,3 +1,24 @@
+// TEMP DEBUG: show exactly who triggers scroll/focus
+const _scrollTo = window.scrollTo.bind(window);
+window.scrollTo = (...args: any[]) => {
+  console.trace("🚨 window.scrollTo called", args);
+  return _scrollTo(...args);
+};
+
+const _scrollIntoView = Element.prototype.scrollIntoView;
+Element.prototype.scrollIntoView = function (...args: any[]) {
+  console.trace("🚨 scrollIntoView called on:", this, args);
+  // @ts-ignore
+  return _scrollIntoView.apply(this, args);
+};
+
+const _focus = HTMLElement.prototype.focus;
+HTMLElement.prototype.focus = function (...args: any[]) {
+  console.trace("🚨 focus() called on:", this, args);
+  // @ts-ignore
+  return _focus.apply(this, args);
+};
+
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
