@@ -1,6 +1,7 @@
 ---
 title: "🧠📞Lead Capture & Speed to Response: How AI Receptionists Stop You From Losing Deals While You’re Busy"
 description: A data-backed breakdown of how AI receptionists improve response speed, capture after-hours leads, qualify buyers and sellers, and book showings automatically.
+excerpt: AI receptionists respond instantly to calls and messages, capture after-hours leads, qualify buyers and sellers, and book showings automatically—so you never lose deals while you’re busy or offline.
 date: 2026-01-30
 author: Tadeas Manas
 readTime: 10 min read
