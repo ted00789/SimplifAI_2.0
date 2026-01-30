@@ -50,7 +50,7 @@ So let’s focus on facts.
 
 ## 📞 The Real Problem AI Receptionists Solve
 
-![Missed phone calls on smartphone screen causing lost business leads](https://www.simplifai-solutions.com/images/blogs/is-an-ai-receptionist-worth-it-2026/missed-call-phone-screen.jpeg)
+![Missed phone call illustration showing lost leads for service businesses](https://www.simplifai-solutions.com/images/blogs/is-an-ai-receptionist-worth-it-2026/missed-call-illustration-phone.jpeg)
 
 Most service businesses do not lose customers because they do bad work.
 
