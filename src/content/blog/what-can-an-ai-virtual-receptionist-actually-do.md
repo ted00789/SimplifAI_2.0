@@ -102,8 +102,6 @@ This process is explained in more detail here:
 
 ## Booking Appointments Automatically 📅
 
-![AI qualifying caller illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-qualify-caller.jpeg)
-
 Booking appointments shouldn’t feel like a chase.
 
 But without automation, it often does. Missed calls. Delayed callbacks. Scheduling back-and-forth. Then silence.
