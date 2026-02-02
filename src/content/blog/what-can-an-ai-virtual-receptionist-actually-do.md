@@ -157,7 +157,7 @@ Some people worry customers will hang up when they hear AI. In practice, speed a
 
 ## Where AI Virtual Receptionists Are Used Today 🏢
 
-![AI qualifies caller and saves information illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-qualifies-caller-then-saves-info.jpeg)
+![AI qualifies caller illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-qualifies-caller.jpeg)
 
 This isn’t experimental anymore.
 
