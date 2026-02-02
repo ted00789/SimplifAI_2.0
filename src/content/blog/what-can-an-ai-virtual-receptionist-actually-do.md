@@ -7,6 +7,7 @@ author: Tadeas Manas
 readTime: 10 min read
 ---
 ![AI picking up calls at night illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-picking-up-calls-at-night.jpeg)
+
 **Quick answer:**  
 An AI virtual receptionist answers your calls, asks the right questions, books appointments, and captures leads automatically. It works around the clock, follows clear rules you set, and helps you stop losing revenue from missed calls without hiring more staff.
 
@@ -101,6 +102,7 @@ This process is explained in more detail here:
 
 ## Booking Appointments Automatically 📅
 ![AI qualifying caller illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-qualifies-caller.jpeg)
+
 Booking appointments shouldn’t feel like a chase.
 
 But without automation, it often does. Missed calls. Delayed callbacks. Scheduling back-and-forth. Then silence.
@@ -149,6 +151,7 @@ Some people worry customers will hang up when they hear AI. In practice, speed a
 
 ## Where AI Virtual Receptionists Are Used Today 🏢
 ![AI confirming booking illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-confirms-booking.jpeg)
+
 This isn’t experimental anymore.
 
 AI receptionists are already being used in industries where calls equal revenue. Real estate. HVAC. Car detailing. Landscaping. Any service business where speed to response matters.
