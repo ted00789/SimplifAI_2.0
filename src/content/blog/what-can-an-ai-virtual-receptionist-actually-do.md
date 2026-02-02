@@ -157,8 +157,6 @@ Some people worry customers will hang up when they hear AI. In practice, speed a
 
 ## Where AI Virtual Receptionists Are Used Today 🏢
 
-![AI qualifies caller illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-qualifies-caller.jpeg)
-
 This isn’t experimental anymore.
 
 AI receptionists are already being used in industries where calls equal revenue. Real estate. HVAC. Car detailing. Landscaping. Any service business where speed to response matters.
