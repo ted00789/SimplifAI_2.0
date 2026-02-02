@@ -6,7 +6,7 @@ date: 2026-02-01
 author: Tadeas Manas
 readTime: 10 min read
 ---
-![AI helping caller illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-helping-caller.jpeg)
+![AI picking up calls at night illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-picking-up-calls-at-night.jpeg)
 **Quick answer:**  
 An AI virtual receptionist answers your calls, asks the right questions, books appointments, and captures leads automatically. It works around the clock, follows clear rules you set, and helps you stop losing revenue from missed calls without hiring more staff.
 
@@ -35,7 +35,9 @@ We break that math down here if you want to see the numbers:
 ---
 
 ## What an AI Virtual Receptionist Actually Is 🧠
-![AI picking up calls at night illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-picking-up-calls-at-night.jpeg)
+![AI helping caller illustration](https://www.simplifai-solutions.com/images/blogs/what-can-an-ai-virtual-receptionist-actually-do/ai-helping-caller.jpeg)
+
+
 An AI virtual receptionist isn’t a chatbot.  
 And it’s definitely not a fancy voicemail.
 
