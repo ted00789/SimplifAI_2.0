@@ -48,7 +48,7 @@ For a full breakdown of the differences, read
 
 ## How Does an AI Receptionist Actually Work? ⚙️
 
-![AI receptionist process flow illustration](https://www.simplifai-solutions.com/images/blogs/what-is-an-ai-receptionist-simple-guide-for-small-business-owners-2026/ai-receptionist-process.jpeg)
+![AI receptionist process flow illustration](https://www.simplifai-solutions.com/images/blogs/what-is-an-ai-receptionist-simple-guide-for-small-business-owners-2026/ai-receptionost-process.jpeg)
 
 From the outside, an AI receptionist feels simple. Behind the scenes, there is a clear and reliable flow that makes everything work smoothly.
 
