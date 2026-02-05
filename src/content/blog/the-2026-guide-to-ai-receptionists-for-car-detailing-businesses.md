@@ -7,7 +7,7 @@ author: "Tadeas Manas"
 readTime: "22 min read"
 ---
 
-![Car detailing business owner missing a call while working](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/car-detailing-illustration.jpeg)
+![Car detailing business owner missing a call while working](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/car-detailig-illustration.jpeg)
 
 **Quick answer:**  
 An AI receptionist acts like a full-time front desk for your car detailing business. It answers every call, explains your services, captures lead details, and helps book jobs when you are busy, driving, or closed. In 2026, many detailers use AI receptionists not to replace themselves, but to stop losing ready-to-book customers without realizing it.
