@@ -7,7 +7,8 @@ author: "Tadeas Manas"
 readTime: "22 min read"
 ---
 
-![Car detailing business owner illustration](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/car-detailing-illustration.jpeg)
+![Car detailing business owner illustration](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/car-detailig-illustration.jpeg)
+
 
 
 
