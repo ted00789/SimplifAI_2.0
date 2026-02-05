@@ -7,7 +7,7 @@ author: "Tadeas Manas"
 readTime: "22 min read"
 ---
 
-![Car detailing business owner illustration](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/car-detailing-illustration.jpeg)
+![Car detailing business owner missing a call while working](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/car-detailing-illustration.jpeg)
 
 **Quick answer:**  
 An AI receptionist acts like a full-time front desk for your car detailing business. It answers every call, explains your services, captures lead details, and helps book jobs when you are busy, driving, or closed. In 2026, many detailers use AI receptionists not to replace themselves, but to stop losing ready-to-book customers without realizing it.
@@ -70,7 +70,7 @@ This is why many detailers first start by asking a simple question:
 
 ## What an AI Receptionist Actually Is (and What It Is Not)
 
-![AI receptionist answering calls instantly](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/ai-answering-fast.jpeg)
+![AI receptionist answering multiple calls 24/7](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/ai-picking-up-calls-24-7.jpeg)
 
 An AI receptionist is not voicemail. It is not a phone tree. It is not a robotic message that tells people to “press one for sales.”
 
