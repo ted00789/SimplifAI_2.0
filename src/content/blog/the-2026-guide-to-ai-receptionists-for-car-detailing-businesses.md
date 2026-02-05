@@ -74,7 +74,7 @@ This is why many detailers first start by asking a simple question:
 
 ## What an AI Receptionist Actually Is (and What It Is Not)
 
-![AI receptionist answering calls fast](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/ai-answering-fast.jpeg)
+![AI answering calls fast](https://www.simplifai-solutions.com/images/blogs/the-2026-guide-to-ai-receptionists-for-car-detailing-businesses/ai-asnwering-fast.jpeg)
 
 
 An AI receptionist is not voicemail. It is not a phone tree. It is not a robotic message that tells people to “press one for sales.”
