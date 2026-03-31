@@ -98,6 +98,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
+        "star-btn": "star-btn calc(var(--duration)*1s) linear infinite",
       },
     },
   },
