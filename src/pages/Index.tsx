@@ -35,6 +35,7 @@ const Index = () => {
         <SolutionSection />
         <HowItWorksSection />
         <CalculatorSection />
+        <PricingSection onOpenDemoForm={openPopup} />
         <FAQSection />
         <FinalCTASection />
       </main>
