@@ -6,6 +6,7 @@ import { StatsSection } from "@/components/StatsSection";
 import { SolutionSection } from "@/components/SolutionSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { CalculatorSection } from "@/components/CalculatorSection";
+import { PricingSection } from "@/components/PricingSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
@@ -34,6 +35,7 @@ const Index = () => {
         <SolutionSection />
         <HowItWorksSection />
         <CalculatorSection />
+        <PricingSection onOpenDemoForm={openPopup} />
         <FAQSection />
         <FinalCTASection />
       </main>
