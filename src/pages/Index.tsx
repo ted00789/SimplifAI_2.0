@@ -1,17 +1,20 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
+import { IndustryDemoPicker } from "@/components/IndustryDemoPicker";
 import { ProblemSection } from "@/components/ProblemSection";
 import { StatsSection } from "@/components/StatsSection";
 import { SolutionSection } from "@/components/SolutionSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { DemosSection } from "@/components/DemosSection";
 import { CalculatorSection } from "@/components/CalculatorSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { BeamsBackground } from "@/components/ui/beams-background";
+import { DemoFormPopup, useDemoPopup } from "@/components/DemoFormPopup";
 
 const Index = () => {
+  const { open, setOpen, openPopup } = useDemoPopup();
+
   return (
     <BeamsBackground intensity="subtle" className="min-h-screen bg-background">
       {/* Subtle noise texture */}
@@ -24,17 +27,19 @@ const Index = () => {
 
       <Navigation />
       <main className="relative z-10">
-        <HeroSection />
+        <HeroSection onOpenDemoForm={openPopup} />
+        <IndustryDemoPicker onRequestDemo={openPopup} />
         <ProblemSection />
         <StatsSection />
         <SolutionSection />
         <HowItWorksSection />
         <CalculatorSection />
-        <DemosSection />
         <FAQSection />
         <FinalCTASection />
       </main>
       <Footer />
+
+      <DemoFormPopup open={open} onOpenChange={setOpen} />
     </BeamsBackground>
   );
 };

@@ -1,16 +1,17 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getCalendlyUrlWithReferral } from "@/lib/referral";
 
-const CALENDLY_URL = "https://calendly.com/ted-manas/ai-appointment-demo";
-export function HeroSection() {
+interface HeroSectionProps {
+  onOpenDemoForm: () => void;
+}
+
+export function HeroSection({ onOpenDemoForm }: HeroSectionProps) {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/60 backdrop-blur-sm border border-border/50 mb-8 animate-fade-in">
-            <Phone size={16} className="text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
               AI-powered lead capture for service businesses
             </span>
@@ -29,20 +30,14 @@ export function HeroSection() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="xl" asChild>
-              <a
-                href={getCalendlyUrlWithReferral(CALENDLY_URL)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                Book a FREE consultation
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+            <Button variant="hero" size="xl" onClick={onOpenDemoForm} className="group">
+              Get Your Free Personalized Demo
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href="#demos">
-                ▶ Try the AI live
+              <a href="#calculator">
+                <Calculator size={20} />
+                See How Much You're Losing
               </a>
             </Button>
           </div>
